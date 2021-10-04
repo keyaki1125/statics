@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}画像一覧{% endblock %}
+
+{% block content %}
+  <h1>画像一覧</h1>
+  {% for image in images %}
+    <p><a href="{% url 'images:detail' pk=image.pk %}">{{ image.title }}</a></p>
+    <img src="{{ image.image.url }}" alt="">
+  {% endfor %}
+  <p><a href="{% url 'images:home' %}"></a></p>
+{% endblock %}
