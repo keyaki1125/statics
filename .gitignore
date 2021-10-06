@@ -129,4 +129,3 @@ dmypy.json
 .pyre/
 
 # 画像フォルダを監視外に
-media/
